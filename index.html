@@ -1,79 +1,416 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Profesional — Valeria</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Portafolio | Valeria Gutierrez</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
+
 <body>
 
-    <header>
-        <div class="profile-badge"> Full Stack Developer Java </div>
-        <h1>Valeria Gutiérrez</h1>
-        <p class="subtitle">Junior Frontend & Java Full Stack Developer</p>
-        
-        <div class="bio-card">
-            <p><strong>👤 Acerca de Mí:</strong> Apasionada por el diseño de interfaces de usuario y el desarrollo frontend en la formación ADSO. Potencio mis habilidades en la creación de soluciones web interactivas, accesibles, semánticas y modulares con un fuerte enfoque en la experiencia de usuario (UX/UI).</p>
-            <p><strong>🚀 Mi Camino:</strong> Conecto la lógica estructurada de componentes modernos con el consumo eficiente de servicios backend. Mi meta es diseñar e implementar arquitecturas de software responsivas, escalables y visualmente impactantes.</p>
-        </div>
-    </header>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container">
 
-    <main>
-        <h2>💼 Estrategias Frontend y Proyectos de Alto Impacto</h2>
-        
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Proyecto</th>
-                        <th>Estrategia y UI/UX Design</th>
-                        <th>Desafío y Solución Aprendida</th>
-                        <th>Tecnologías</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <div class="proj-title-container">
-                                <img src="src/sierra-dorada" alt="" class="proj-img" onerror="this.style.display='none';">
-                                <span class="proj-name"> 🛒 Sierra Dorada</span>
-                            </div>
-                        </td>
-                        <td>Diseño responsivo centrado en el usuario para resolver la baja presencia digital de comercios tradicionales.</td>
-                        <td>Estrategia de persistencia en el carrito de compras y sesiones mediante la arquitectura MVC.</td>
-                        <td><span class="tech-tag web">HTML5/CSS3</span><span class="tech-tag java">Java</span><span class="tech-tag db">MySQL</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="proj-name">📊 CRM Pana Cambios</span></td>
-                        <td>Maquetación integral de paneles de administración y menús de login interactivos con flujos de datos complejos.</td>
-                        <td>Consumo asíncrono de APIs REST estructurado en componentes reutilizables trabajando bajo metodologías ágiles Scrum.</td>
-                        <td><span class="tech-tag web">React</span><span class="tech-tag web">JavaScript ES6+</span><span class="tech-tag tools">APIs REST</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="proj-name">🎮 ABC Challenge</span></td>
-                        <td>Aplicación interactiva del abecedario basada en mecánicas de juego (*card-flipping*) con diseño responsivo refinado.</td>
-                        <td>Manipulación del DOM en tiempo real y optimización del rendimiento en la lógica de estados en JavaScript.</td>
-                        <td><span class="tech-tag web">JavaScript</span><span class="tech-tag web">UI/UX Design</span><span class="tech-tag tools">Git</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="proj-name">📱 Grande Table</span></td>
-                        <td>Actualización de documentación técnica y optimización de flujos de redirección urbana en entornos móviles.</td>
-                        <td>Análisis de la arquitectura de SDKs y estandarización de formatos obsoletos para la correcta integración de deep links.</td>
-                        <td><span class="tech-tag tools">iOS SDK</span><span class="tech-tag tools">Deep Links</span><span class="tech-tag tools">Documentación</span></td>
-                    </tr>
-                </tbody>
-            </table>
+            <a class="navbar-brand fw-bold" href="#inicio">
+                <img src="img/VG-logo.png" alt="VG logo" class="navbar-logo">
+            </a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a href="#inicio" class="nav-link active">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">Sobre mí</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link">Skills</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link">Proyectos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#certificates" class="nav-link">Certificados</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contacto</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
         </div>
-    </main>
+    </nav>
+
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <span class="saludo">
+                        Hola, soy 👋
+                    </span>
+                    <h1>
+                        Valeria <br>
+                        <span>Gutierrez</span>
+                    </h1>
+                    <h2>
+                        Desarrolladora Java Full Stack
+                    </h2>
+                    <p>
+
+                        Apasionada por crear aplicaciones modernas,
+                        escalables y funcionales utilizando Java,
+                        Spring Boot, MySQL y tecnologías Front-End.
+
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="cv/Valeria-Gutierrez-CV.pdf" class="btn btn-primary btn-lg">
+                            <i class="bi bi-download"></i>
+                            Descargar CV
+                        </a>
+
+                        <a href="#projects" class="btn btn-outline-light btn-lg">
+                            <i class="bi bi-folder"></i>
+                            Ver Proyectos
+                        </a>
+
+                    </div>
+
+                    <div class="social">
+
+                        <a href="https://github.com/Valeplay27">
+                            <i class="bi bi-github"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/valeria-gutierrez-desarrolladora-full-stack/">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+
+                        <a href="">
+                            <i class="bi bi-envelope-fill"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6 text-center">
+
+                    <div class="photo">
+
+                        <img src="img/perfil.jpg" class="img-fluid" alt="Valeria">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--================ SOBRE MI =================-->
+
+    <section class="about section" id="about">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-5">
+
+                    <img src="img/perfil.jpg" class="img-fluid rounded-4">
+
+                </div>
+
+                <div class="col-lg-7">
+
+                    <h2>Sobre mí</h2>
+
+                    <p>
+
+                        Soy aprendiz del SENA en Análisis y Desarrollo
+                        de Software. Me apasiona aprender nuevas
+                        tecnologías y desarrollar aplicaciones web
+                        utilizando Java, Spring Boot, MySQL y Bootstrap.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--================ ESTADISTICAS =================-->
+
+    <section class="stats">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-3">
+
+                    <div class="stat-card">
+
+                        <h3>3+</h3>
+
+                        <p>Proyectos</p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="stat-card">
+
+                        <h3>8+</h3>
+
+                        <p>Tecnologías</p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="stat-card">
+
+                        <h3>100%</h3>
+
+                        <p>Compromiso</p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="stat-card">
+
+                        <h3>SENA</h3>
+
+                        <p>ADSO</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--================ SKILLS =================-->
+
+    <section class="skills section" id="skills">
+
+        <div class="container">
+
+            <h2 class="text-center mb-5">
+                Tecnologías
+            </h2>
+
+            <div class="row g-4">
+
+                <div class="col-lg-3 col-6">
+                    <div class="skill-card">Java</div>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <div class="skill-card">Spring Boot</div>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <div class="skill-card">MySQL</div>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <div class="skill-card">Bootstrap</div>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <div class="skill-card">JavaScript</div>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <div class="skill-card">HTML5</div>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <div class="skill-card">CSS3</div>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <div class="skill-card">Git</div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--================ PROYECTOS =================-->
+
+    <section id="projects" class="section">
+
+        <div class="container">
+
+            <h2 class="text-center mb-5">
+                Proyectos
+            </h2>
+
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+
+                    <div class="card project-card">
+
+                        <img src="img/proyecto1.jpg" class="card-img-top">
+
+                        <div class="card-body">
+
+                            <h4>Sistema POS</h4>
+
+                            <p>
+                                Sistema de ventas desarrollado con
+                                Spring Boot.
+                            </p>
+
+                            <a href="#" class="btn btn-primary">
+                                Ver Proyecto
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <div class="card project-card">
+
+                        <img src="img/proyecto2.jpg">
+
+                        <div class="card-body">
+
+                            <h4>Inventario</h4>
+
+                            <p>
+                                Sistema de inventario desarrollado
+                                con Java.
+                            </p>
+
+                            <a href="#" class="btn btn-primary">
+                                Ver Proyecto
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <div class="card project-card">
+
+                        <img src="img/Proyecto-3.jpg">
+
+                        <div class="card-body">
+
+                            <h4>E-commerce</h4>
+
+                            <p>
+                                Tienda online con carrito de compras.
+                            </p>
+
+                            <a href="https://raydan08x.github.io/e-commerce-sierra-dorada/index.html" class="btn btn-primary">
+                                Ver Proyecto
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--================ CONTACTO =================-->
+
+    <section id="contact" class="contact">
+
+        <div class="container">
+
+            <div class="contact-box">
+
+                <h2>¿Tienes un proyecto?</h2>
+
+                <p>
+                    Estoy disponible para nuevas oportunidades.
+                </p>
+
+                <a href="mailto:valeriagutierrez193@gmail.com" class="btn btn-light btn-lg">
+                    Contáctame
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--================ FOOTER =================-->
 
     <footer>
-        <p>📍 Bogotá, Colombia | ✉️ valeriagutierrez193@gmail.com</p>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/valeria-gutierrez-desarrolladora-full-stack/" target="_blank">LinkedIn</a>
-            <a href="https://github.com/Valeplay27?tab=repositories" target="_blank">GitHub</a>
+
+        <div class="container">
+
+            <p>
+                © 2026 Valeria Gutierrez | Java Full Stack Developer
+            </p>
+
         </div>
+
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
+
 </html>

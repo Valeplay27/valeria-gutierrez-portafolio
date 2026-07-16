@@ -1,0 +1,235 @@
+/*=====================================
+ TABLETS
+======================================*/
+
+@media (max-width:992px){
+
+.hero{
+
+    padding-top:120px;
+    text-align:center;
+
+}
+
+.hero h1{
+
+    font-size:3.8rem;
+
+}
+
+.hero h2{
+
+    font-size:1.8rem;
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+    flex-wrap:wrap;
+
+}
+
+.social{
+
+    justify-content:center;
+
+}
+
+.photo{
+
+    margin-top:60px;
+
+    width:340px;
+    height:340px;
+
+}
+
+.photo::before{
+
+    width:320px;
+    height:320px;
+
+}
+
+.about{
+
+    text-align:center;
+
+}
+
+.about img{
+
+    margin-bottom:40px;
+
+}
+
+.stat-card{
+
+    margin-bottom:25px;
+
+}
+
+}
+
+/*=====================================
+ CELULARES
+======================================*/
+
+@media (max-width:768px){
+
+.navbar-brand{
+
+    font-size:1.3rem;
+
+}
+
+.hero{
+
+    padding-top:120px;
+    padding-bottom:60px;
+
+}
+
+.hero h1{
+
+    font-size:3rem;
+
+}
+
+.hero h2{
+
+    font-size:1.4rem;
+
+}
+
+.hero p{
+
+    font-size:.95rem;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+}
+
+.hero-buttons .btn{
+
+    width:100%;
+
+}
+
+.photo{
+
+    width:260px;
+    height:260px;
+
+    margin-top:50px;
+
+}
+
+.photo::before{
+
+    width:240px;
+    height:240px;
+
+}
+
+.section{
+
+    padding:70px 0;
+
+}
+
+.section h2{
+
+    font-size:2rem;
+
+}
+
+.stat-card{
+
+    padding:25px;
+
+}
+
+.skill-card{
+
+    padding:20px;
+    font-size:1rem;
+
+}
+
+.project-card img{
+
+    height:200px;
+
+}
+
+.contact-box{
+
+    padding:45px 25px;
+
+}
+
+.contact-box h2{
+
+    font-size:2rem;
+
+}
+
+}
+
+/*=====================================
+ CELULARES PEQUEÑOS
+======================================*/
+
+@media (max-width:480px){
+
+.hero h1{
+
+    font-size:2.4rem;
+
+}
+
+.hero h2{
+
+    font-size:1.2rem;
+
+}
+
+.hero p{
+
+    font-size:.9rem;
+
+}
+
+.photo{
+
+    width:220px;
+    height:220px;
+
+}
+
+.photo::before{
+
+    width:200px;
+    height:200px;
+
+}
+
+.social{
+
+    gap:18px;
+
+}
+
+.social i{
+
+    font-size:1.4rem;
+
+}
+
+}
