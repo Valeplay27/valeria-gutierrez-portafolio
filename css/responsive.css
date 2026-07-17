@@ -70,6 +70,24 @@
 
 }
 
+.carousel-item{
+
+    flex:0 0 calc(33.33% - 20px) !important;
+
+}
+
+.carousel-btn.prev{
+
+    left:-20px;
+
+}
+
+.carousel-btn.next{
+
+    right:-20px;
+
+}
+
 }
 
 /*=====================================
