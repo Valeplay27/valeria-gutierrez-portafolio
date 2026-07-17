@@ -147,47 +147,15 @@ boton.addEventListener("click",()=>{
  CARRUSEL DE TECNOLOGÍAS
 =============================*/
 
-const carouselTrack = document.querySelector(".carousel-track");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
-const carouselItems = document.querySelectorAll(".carousel-item");
-
-let currentIndex = 0;
-
-function updateCarousel(){
-
-    const itemWidth = carouselItems[0].offsetWidth + 30;
-    carouselTrack.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
-
-}
-
-function nextSlide(){
-
-    if(currentIndex < carouselItems.length - 4){
-        currentIndex++;
-    }else{
-        currentIndex = 0;
-    }
-    updateCarousel();
-
-}
-
-function prevSlide(){
-
-    if(currentIndex > 0){
-        currentIndex--;
-    }else{
-        currentIndex = carouselItems.length - 4;
-    }
-    updateCarousel();
-
-}
-
-nextBtn.addEventListener("click", nextSlide);
-prevBtn.addEventListener("click", prevSlide);
-
-// Auto-scroll cada 5 segundos
-setInterval(nextSlide, 5000);
-
-// Actualizar al redimensionar la ventana
-window.addEventListener("resize", updateCarousel);
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        const track = document.getElementById("carouselTrack");
+        if (track) {
+            const items = Array.from(track.children);
+            items.forEach(item => {
+                const clone = item.cloneNode(true);
+                track.appendChild(clone);
+            });
+        }
+    }, 100); 
+});
