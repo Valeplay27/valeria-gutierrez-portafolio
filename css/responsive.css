@@ -1,253 +1,73 @@
 /*=====================================
- TABLETS
+  TABLETS
 ======================================*/
-
-@media (max-width:992px){
-
-.hero{
-
-    padding-top:120px;
-    text-align:center;
-
-}
-
-.hero h1{
-
-    font-size:3.8rem;
-
-}
-
-.hero h2{
-
-    font-size:1.8rem;
-
-}
-
-.hero-buttons{
-
-    justify-content:center;
-    flex-wrap:wrap;
-
-}
-
-.social{
-
-    justify-content:center;
-
-}
-
-.photo{
-
-    margin-top:60px;
-
-    width:340px;
-    height:340px;
-
-}
-
-.photo::before{
-
-    width:320px;
-    height:320px;
-
-}
-
-.about{
-
-    text-align:center;
-
-}
-
-.about img{
-
-    margin-bottom:40px;
-
-}
-
-.stat-card{
-
-    margin-bottom:25px;
-
-}
-
-.carousel-item{
-
-    flex:0 0 calc(33.33% - 20px) !important;
-
-}
-
-.carousel-btn.prev{
-
-    left:-20px;
-
-}
-
-.carousel-btn.next{
-
-    right:-20px;
-
-}
-
+@media (max-width: 992px) {
+  .hero {
+    padding-top: 120px;
+    text-align: center;
+  }
+  .hero h1 { font-size: 3.8rem; }
+  .hero h2 { font-size: 1.8rem; }
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .social { justify-content: center; }
+  .photo {
+    margin: 60px auto 0;
+    width: 340px;
+    height: 340px;
+  }
+  .photo::before {
+    width: 320px;
+    height: 320px;
+  }
+  .about { text-align: center; }
+  .stat-card { margin-bottom: 25px; }
 }
 
 /*=====================================
- CELULARES
+  CELULARES
 ======================================*/
-
-@media (max-width:768px){
-
-.navbar-brand{
-
-    font-size:1.3rem;
-
-}
-
-.hero{
-
-    padding-top:120px;
-    padding-bottom:60px;
-
-}
-
-.hero h1{
-
-    font-size:3rem;
-
-}
-
-.hero h2{
-
-    font-size:1.4rem;
-
-}
-
-.hero p{
-
-    font-size:.95rem;
-
-}
-
-.hero-buttons{
-
-    flex-direction:column;
-
-}
-
-.hero-buttons .btn{
-
-    width:100%;
-
-}
-
-.photo{
-
-    width:260px;
-    height:260px;
-
-    margin-top:50px;
-
-}
-
-.photo::before{
-
-    width:240px;
-    height:240px;
-
-}
-
-.section{
-
-    padding:70px 0;
-
-}
-
-.section h2{
-
-    font-size:2rem;
-
-}
-
-.stat-card{
-
-    padding:25px;
-
-}
-
-.skill-card{
-
-    padding:20px;
-    font-size:1rem;
-
-}
-
-.project-card img{
-
-    height:200px;
-
-}
-
-.contact-box{
-
-    padding:45px 25px;
-
-}
-
-.contact-box h2{
-
-    font-size:2rem;
-
-}
-
+@media (max-width: 768px) {
+  .navbar-brand { font-size: 1.3rem; }
+  .hero {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+  .hero h1 { font-size: 3rem; }
+  .hero h2 { font-size: 1.4rem; }
+  .hero p { font-size: 0.95rem; }
+  .hero-buttons { flex-direction: column; gap: 10px; }
+  .hero-buttons .btn { width: 100%; padding: 12px 20px; }
+  .photo {
+    width: 260px;
+    height: 260px;
+    margin-top: 40px;
+  }
+  .photo::before {
+    width: 240px;
+    height: 240px;
+  }
+  .section { padding: 60px 0; }
+  .section h2 { font-size: 2.2rem; margin-bottom: 30px; }
+  .about p { font-size: 1rem !important; }
+  .stat-card { padding: 25px; }
+  .project-card img { height: 200px; }
+  .contact-box { padding: 45px 25px; }
+  .contact-box h2 { font-size: 2rem; }
 }
 
 /*=====================================
- CELULARES PEQUEÑOS
+  CELULARES PEQUEÑOS
 ======================================*/
-
-@media (max-width:480px){
-
-.hero h1{
-
-    font-size:2.4rem;
-
-}
-
-.hero h2{
-
-    font-size:1.2rem;
-
-}
-
-.hero p{
-
-    font-size:.9rem;
-
-}
-
-.photo{
-
-    width:220px;
-    height:220px;
-
-}
-
-.photo::before{
-
-    width:200px;
-    height:200px;
-
-}
-
-.social{
-
-    gap:18px;
-
-}
-
-.social i{
-
-    font-size:1.4rem;
-
-}
-
+@media (max-width: 480px) {
+  .hero h1 { font-size: 2.4rem; }
+  .hero h2 { font-size: 1.2rem; }
+  .hero p { font-size: 0.9rem; }
+  .photo { width: 220px; height: 220px; }
+  .photo::before { width: 200px; height: 200px; }
+  .social { gap: 18px; }
+  .social a { font-size: 1.5rem; }
 }

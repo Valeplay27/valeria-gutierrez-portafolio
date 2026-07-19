@@ -1,7 +1,7 @@
 /* ==============================
    GOOGLE FONT
 =================================*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 /* ==============================
    VARIABLES
@@ -78,11 +78,14 @@ body {
    HERO
 =================================*/
 .hero {
-    min-height: 100vh;
+    min-height: 75vh;
     display: flex;
     align-items: center;
     background: linear-gradient(135deg, #050816, #15193d);
     color: white;
+    position: relative;
+    overflow: hidden;
+    padding: 140px 0 100px;
 }
 
 .saludo {
@@ -110,6 +113,27 @@ body {
     margin: 25px 0;
     color: #cbd5e1;
     line-height: 1.8;
+}
+
+.hero-wave {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.hero-wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 80px;
+}
+
+.hero-wave .shape-fill {
+    fill: #F8FAFC;
 }
 
 /* ==============================
@@ -162,34 +186,29 @@ body {
 }
 
 /* ==============================
-   FOTO
+   FOTO (BLOB ASIMÉTRICO ANIMADO)
 =================================*/
-.photo {
+.photo-blob {
     position: relative;
-    width: 420px;
-    height: 420px;
-    margin: auto;
-}
-
-.photo::before {
-    content: "";
-    position: absolute;
     width: 380px;
     height: 380px;
-    background: #6C63FF;
-    border-radius: 50%;
-    filter: blur(80px);
-    opacity: .5;
-    left: 20px;
-    top: 20px;
+    margin: auto;
+    background: linear-gradient(135deg, #6C63FF, #8B5CF6);
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: morph 8s ease-in-out infinite alternate, zoom 1.3s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 35px rgba(108, 99, 255, 0.3);
 }
 
-.photo img {
-    position: relative;
-    width: 100%;
-    border-radius: 50%;
-    z-index: 5;
-    border: 8px solid rgba(255, 255, 255, .1);
+.photo-blob img {
+    width: 95%;
+    height: 95%;
+    object-fit: cover;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: morph 8s ease-in-out infinite alternate;
+    border: 4px solid rgba(255, 255, 255, 0.2);
 }
 
 /* ==============================
@@ -206,16 +225,35 @@ body {
 }
 
 /* ==============================
-   ABOUT
+   ABOUT (ESTILO PREMIUM)
 =================================*/
-.about img {
-    border-radius: 25px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, .15);
+.subtitulo-purple {
+    color: #8B5CF6;
+    font-size: 1rem;
+    letter-spacing: 1px;
 }
 
-.about p {
-    line-height: 2;
-    color: #555;
+.titulo-about {
+    font-size: 2.8rem;
+    color: #0F172A;
+}
+
+.titulo-about span {
+    color: #6C63FF;
+}
+
+.content-border-left {
+    border-left: 4px solid #8B5CF6;
+}
+
+.content-border-left p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #334155;
+}
+
+.img-premium {
+    filter: drop-shadow(0 15px 25px rgba(108, 99, 255, 0.15));
 }
 
 /* ==============================
@@ -249,7 +287,7 @@ body {
 }
 
 /* ==============================
-   TECNOLOGÍAS (GRID DE BOOTSTRAP)
+   TECNOLOGÍAS
 =================================*/
 .tech-card {
     background: white;
@@ -283,6 +321,7 @@ body {
    PROYECTOS
 =================================*/
 .project-card {
+    background: white;
     border: none;
     border-radius: 20px;
     overflow: hidden;
@@ -305,6 +344,10 @@ body {
 
 .project-card h4 {
     font-weight: 700;
+}
+.project-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 30px rgba(108, 99, 255, 0.24); /* Sombra morada difuminada idéntica al botón */
 }
 
 /* ==============================
@@ -347,10 +390,6 @@ footer {
     animation: fadeLeft 1s ease;
 }
 
-.photo {
-    animation: zoom 1.3s;
-}
-
 @keyframes fadeLeft {
     from {
         opacity: 0;
@@ -360,6 +399,11 @@ footer {
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+@keyframes morph {
+    0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    100% { border-radius: 40% 60% 70% 30% / 40% 60% 30% 70%; }
 }
 
 @keyframes zoom {
