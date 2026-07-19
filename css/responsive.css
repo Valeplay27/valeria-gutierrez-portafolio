@@ -1,5 +1,5 @@
 /*=====================================
-  TABLETS
+   TABLETS
 ======================================*/
 @media (max-width: 992px) {
   .hero {
@@ -14,21 +14,27 @@
     gap: 15px;
   }
   .social { justify-content: center; }
-  .photo {
+  .photo-blob {
     margin: 60px auto 0;
     width: 340px;
     height: 340px;
   }
-  .photo::before {
-    width: 320px;
-    height: 320px;
-  }
   .about { text-align: center; }
   .stat-card { margin-bottom: 25px; }
+  
+  .tech-info {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  }
+  .tech-grid {
+    justify-content: center;
+    gap: 25px;
+  }
 }
 
 /*=====================================
-  CELULARES
+   CELULARES
 ======================================*/
 @media (max-width: 768px) {
   .navbar-brand { font-size: 1.3rem; }
@@ -41,33 +47,84 @@
   .hero p { font-size: 0.95rem; }
   .hero-buttons { flex-direction: column; gap: 10px; }
   .hero-buttons .btn { width: 100%; padding: 12px 20px; }
-  .photo {
+  .photo-blob {
     width: 260px;
     height: 260px;
     margin-top: 40px;
-  }
-  .photo::before {
-    width: 240px;
-    height: 240px;
   }
   .section { padding: 60px 0; }
   .section h2 { font-size: 2.2rem; margin-bottom: 30px; }
   .about p { font-size: 1rem !important; }
   .stat-card { padding: 25px; }
-  .project-card img { height: 200px; }
   .contact-box { padding: 45px 25px; }
   .contact-box h2 { font-size: 2rem; }
+
+  /* TIMELINE RESPONSIVE */
+  .timeline::before {
+    display: none;
+  }
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .timeline-icon {
+    margin-left: 10px;
+  }
+  .timeline-card {
+    width: 100%;
+  }
+
+  /* CERTIFICADOS RESPONSIVE */
+  .certificate-body {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .certificate-preview { flex: unset; }
+  .certificate-tags { justify-content: center; }
 }
 
 /*=====================================
-  CELULARES PEQUEÑOS
+   CELULARES PEQUEÑOS
 ======================================*/
 @media (max-width: 480px) {
   .hero h1 { font-size: 2.4rem; }
   .hero h2 { font-size: 1.2rem; }
   .hero p { font-size: 0.9rem; }
-  .photo { width: 220px; height: 220px; }
-  .photo::before { width: 200px; height: 200px; }
+  .photo-blob { width: 220px; height: 220px; }
   .social { gap: 18px; }
   .social a { font-size: 1.5rem; }
+  .certificate-preview img { width: 140px; }
+  .certificate-info h3 { font-size: 1.2rem; }
+  .project-img-container { height: 240px; }
+}
+/*=========================================
+            RESPONSIVE
+=========================================*/
+
+@media(max-width:768px){
+
+    .contact-banner{
+        padding:70px 15px;
+    }
+
+    .contact-glass{
+        padding:40px 25px;
+    }
+
+    .contact-glass h2{
+        font-size:2.2rem;
+    }
+
+    .contact-description{
+        font-size:1rem;
+    }
+
+    .btn-contact,
+    .btn-cv{
+
+        width:100%;
+    }
+
 }

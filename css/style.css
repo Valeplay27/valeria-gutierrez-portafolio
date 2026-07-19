@@ -289,88 +289,572 @@ body {
 /* ==============================
    TECNOLOGÍAS
 =================================*/
-.tech-card {
-    background: white;
-    border-radius: 15px;
-    padding: 30px 20px;
+.tech-category {
+    background: #fff;
+    border-radius: 22px;
+    padding: 30px;
+    margin-bottom: 35px;
+    box-shadow: 0 10px 35px rgba(0,0,0,.08);
+    position: relative;
+    transition: .35s;
+}
+
+.tech-category:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(124,77,255,.18);
+}
+
+.tech-header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 5px;
+    border-radius: 22px 22px 0 0;
+}
+
+.frontend { background: #7C4DFF; }
+.backend { background: #22C55E; }
+.tools { background: #3B82F6; }
+
+.tech-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.tech-icon {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 30px;
+    flex-shrink: 0;
+}
+
+.frontend-icon { background: #7C4DFF; }
+.backend-icon { background: #22C55E; }
+.tools-icon { background: #3B82F6; }
+
+.tech-info h4 {
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.tech-info p {
+    color: #6c757d;
+    margin: 0;
+}
+
+.tech-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.tech-item {
     text-align: center;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
-    transition: .4s;
+    transition: .35s;
+}
+
+.tech-item img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.tech-item span {
+    display: block;
+    font-weight: 600;
+    font-size: .95rem;
+}
+
+.tech-item:hover {
+    transform: translateY(-8px) scale(1.08);
+}
+
+.tech-item:hover img {
+    filter: drop-shadow(0 10px 20px rgba(124,77,255,.35));
+}
+
+.tech-item i {
+    font-size: 55px;
+    margin-bottom: 12px;
+    transition: .35s ease;
+}
+
+.tech-item:hover i {
+    transform: scale(1.15);
+}
+
+/* =========================================
+   TIMELINE (TRAYECTORIA)
+=========================================*/
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 35px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(
+        to bottom,
+        #198754,
+        #0d6efd,
+        #ffd700,
+        #dc3545,
+        #198754
+    );
+    border-radius: 20px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 45px;
+    position: relative;
+}
+
+.timeline-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+    z-index: 2;
+    flex-shrink: 0;
+    box-shadow: 0 12px 25px rgba(0,0,0,.15);
+    transition: all .35s ease;
+}
+
+/* TARJETA TIMELINE */
+.timeline-card {
+    flex: 1;
+    background: #fff;
+    border-radius: 18px;
+    padding: 28px;
+    border: 1px solid #ececec;
+    box-shadow: 0 10px 35px rgba(0,0,0,.08);
+    transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+}
+
+.timeline-card h4 {
+    font-weight: 700;
+    transition: color .35s ease;
+}
+
+.timeline-card .badge {
+    transition: all .35s ease;
+}
+
+/* TIMELINE HOVER INTERACTIVO */
+.timeline-item:hover .timeline-card {
+    transform: translateY(-8px);
+    border-color: #7b4dff;
+    box-shadow: 0 20px 45px rgba(123,77,255,.18), 0 0 0 3px rgba(123,77,255,.08);
+}
+
+.timeline-item:hover .timeline-icon {
+    transform: scale(1.12);
+    box-shadow: 0 15px 35px rgba(123,77,255,.28);
+}
+
+.timeline-item:hover .timeline-card h4 {
+    color: #7b4dff;
+}
+
+.timeline-item:hover .badge {
+    transform: scale(1.05);
+    box-shadow: 0 8px 18px rgba(123,77,255,.20);
+}
+
+/* CLASES DE COLORES CUSTOM */
+.border-purple { border-left-color: #6f42c1 !important; }
+.bg-purple { background-color: #6f42c1 !important; color: #fff; }
+.border-golden { border-left-color: #ffd700 !important; }
+.bg-golden { background-color: #ffd700 !important; }
+
+/* ===========================
+   CERTIFICADOS
+===========================*/
+.certificate-card {
+    position: relative;
+    background: #fff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0,0,0,.08);
+    transition: .35s ease;
+    border: 1px solid #ececec;
+    height: 100%;
+}
+
+.certificate-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #7B61FF, #8B5CF6);
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+    border-color: #6f42c1 !important;
+    box-shadow: 0 10px 20px rgba(111, 66, 193, 0.15) !important;
+}
+
+.certificate-body {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 24px;
+}
+
+/* MINIATURA CERTIFICADOS */
+.certificate-preview {
+    flex: 0 0 160px;
+}
+
+.certificate-preview img {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 15px 30px rgba(0,0,0,.18);
+    transform: rotate(-4deg);
+    transition: .35s ease;
+    border: 6px solid white;
+}
+
+.certificate-card:hover .certificate-preview img {
+    transform: rotate(0deg) scale(1.03);
+}
+
+/* INFORMACIÓN CERTIFICADOS */
+.certificate-info {
+    flex: 1;
+}
+
+.certificate-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: #F3EEFF;
+    color: #7B61FF;
+    font-size: .75rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.certificate-info h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+
+.certificate-info small {
+    color: #7a7a7a;
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.certificate-info p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* TAGS */
+.certificate-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.certificate-tags span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 10px;
+    border: 1px solid #E5E5E5;
+    background: #fff;
+    font-size: .8rem;
+}
+
+.certificate-tags i {
+    color: #7B61FF;
+}
+
+/* BOTÓN CERTIFICADOS */
+.certificate-card .btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(90deg, #7B61FF, #8B5CF6);
+}
+
+.certificate-card .btn:hover {
+    transform: translateY(-2px);
+}
+
+/*===========================
+   PROYECTOS PREMIUM VERTICAL
+===========================*/
+.project-vertical-premium {
+    background: #fff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0,0,0,.08);
+    transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    height: 100%;
-    justify-content: center;
+    border: 1px solid #ececec;
 }
 
-.tech-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 35px rgba(108, 99, 255, .2);
+.project-vertical-premium:hover {
+    transform: translateY(-5px);
+    border-color: #6f42c1 !important;
+    box-shadow: 0 10px 20px rgba(111, 66, 193, 0.15) !important;
 }
 
-.tech-logo {
-    display: block !important;
-    width: 60px !important;
-    height: 60px !important;
-    object-fit: contain;
-    opacity: 1 !important;
-}
-
-/* ==============================
-   PROYECTOS
-=================================*/
-.project-card {
-    background: white;
-    border: none;
-    border-radius: 20px;
+.project-img-container {
+    width: 100%;
+    height: 320px;
     overflow: hidden;
-    transition: .4s;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, .08);
+    border-bottom: 1px solid #ececec;
 }
 
-.project-card:hover {
-    transform: translateY(-12px);
-}
-
-.project-card img {
-    height: 240px;
+.project-img-container img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    transition: transform .35s ease;
 }
 
-.project-card .card-body {
-    padding: 30px;
+.project-vertical-premium:hover .project-img-container img {
+    transform: scale(1.05);
 }
 
-.project-card h4 {
+.project-content {
+    padding: 24px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.project-badge {
+    display: inline-flex;
+    align-self: flex-start;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: #F3EEFF;
+    color: #7B61FF;
+    font-size: .75rem;
     font-weight: 700;
 }
-.project-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 15px 30px rgba(108, 99, 255, 0.24); /* Sombra morada difuminada idéntica al botón */
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 4px;
 }
 
-/* ==============================
-   CONTACTO
-=================================*/
-.contact {
-    padding: 100px 0;
+.project-tags span {
+    display: inline-flex;
+    padding: 4px 10px;
+    border-radius: 10px;
+    border: 1px solid #E5E5E5;
+    background: #fff;
+    font-size: .78rem;
+    font-weight: 500;
 }
 
-.contact-box {
-    background: linear-gradient(135deg, #15193d, #6C63FF);
+.project-vertical-premium .btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(90deg, #7B61FF, #8B5CF6);
+    width: 100%;
+}
+
+/* ==================================================
+                    CONTACTO
+==================================================*/
+.contact-banner {
+    position: relative;
+    overflow: hidden;
+    padding: 50px 20px; /* Reducido de 90px a 50px */
+    border-radius: 32px;
+    background: linear-gradient(135deg, #171a46 0%, #2d2f72 45%, #6b5cff 100%);
+}
+
+/* =========================================
+                    CÍRCULOS
+=========================================*/
+.contact-circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(10px);
+    opacity: .25;
+}
+
+.circle-1 {
+    width: 180px;
+    height: 180px;
+    background: #8f7cff;
+    left: -60px;
+    top: -40px;
+}
+
+.circle-2 {
+    width: 140px;
+    height: 140px;
+    background: #9d8cff;
+    right: -30px;
+    top: 20px;
+}
+
+.circle-3 {
+    width: 110px;
+    height: 110px;
+    background: #6b5cff;
+    left: 18%;
+    bottom: -30px;
+}
+
+/* =========================================
+                    TARJETA
+=========================================*/
+.contact-glass {
+    position: relative;
+    z-index: 5;
+    max-width: 680px; /* Reducido de 760px a 680px */
+    margin: auto;
+    padding: 35px 30px; /* Reducido de 55px 45px a 35px 30px */
+    border-radius: 24px;
+    background: rgba(255, 255, 255, .08);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, .18);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, .20);
+    transition: .35s;
+}
+
+.contact-glass:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 55px rgba(0, 0, 0, .28);
+}
+
+/* =========================================
+                    TITULOS
+=========================================*/
+.contact-glass h2 {
     color: white;
-    text-align: center;
-    border-radius: 25px;
-    padding: 70px;
+    font-size: 2.2rem; /* Reducido de 3rem a 2.2rem */
+    font-weight: 800;
+    margin-bottom: 10px;
 }
 
-.contact-box h2 {
-    font-size: 2.8rem;
+.contact-description {
+    color: rgba(255, 255, 255, .85);
+    font-size: 0.95rem; /* Reducido de 1.1rem a 0.95rem */
+    line-height: 1.6;
+    max-width: 560px;
+    margin: auto;
 }
 
-.contact-box p {
-    margin: 20px 0 35px;
+/* =========================================
+                    BOTONES
+=========================================*/
+.btn-contact {
+    background: linear-gradient(90deg, #7B61FF, #8B5CF6);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 24px; /* Relleno optimizado y más delgado */
+    font-weight: 600;
+    transition: .35s;
+}
+
+.btn-contact:hover {
+    transform: translateY(-3px);
+    color: white;
+    box-shadow: 0 10px 20px rgba(123, 97, 255, .35);
+}
+
+.btn-cv {
+    border: 2px solid rgba(255, 255, 255, .45);
+    color: white;
+    border-radius: 12px;
+    padding: 10px 24px; /* Relleno optimizado y más delgado */
+    font-weight: 600;
+    transition: .35s;
+}
+
+.btn-cv:hover {
+    background: white;
+    color: #6b5cff;
+    transform: translateY(-3px);
+}
+
+/* =========================================
+                    REDES
+=========================================*/
+.contact-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.contact-social a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: .30s;
+}
+
+.contact-social a:hover {
+    color: #d5cbff;
+}
+
+.contact-social i {
+    margin-right: 6px;
+    font-size: 1rem;
+}
+
+.separator {
+    color: rgba(255, 255, 255, .3);
 }
 
 /* ==============================
