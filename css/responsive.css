@@ -128,3 +128,32 @@
     }
 
 }
+/* =========================================
+   CORRECCIONES MÓVIL (NAVBAR Y TRAYECTORIA)
+=========================================*/
+@media (max-width: 991px) {
+  /* Fondo oscuro para el menú desplegable de Bootstrap */
+  .navbar-collapse {
+    background: rgba(8, 12, 28, 0.98);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 20px;
+    border-radius: 16px;
+    margin-top: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .navbar-nav .nav-link {
+    margin-left: 0 !important;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Separación para el icono de la trayectoria */
+  .timeline-icon {
+    margin-left: 0;
+    margin-bottom: 12px; /* Separa el icono amarillo/morado de la tarjeta inferior */
+  }
+}
