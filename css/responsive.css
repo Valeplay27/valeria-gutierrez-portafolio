@@ -75,6 +75,15 @@
     width: 100%;
   }
 
+  .timeline-header {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .timeline-card .badge {
+    justify-self: start;
+  }
+
   /* CERTIFICADOS RESPONSIVE */
   .certificate-body {
     flex-direction: column;

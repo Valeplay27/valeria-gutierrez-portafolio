@@ -461,12 +461,21 @@ body {
     transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
 }
 
+.timeline-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 12px;
+    align-items: start;
+}
+
 .timeline-card h4 {
     font-weight: 700;
     transition: color .35s ease;
 }
 
 .timeline-card .badge {
+    justify-self: end;
+    white-space: nowrap;
     transition: all .35s ease;
 }
 
